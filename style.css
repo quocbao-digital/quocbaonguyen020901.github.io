@@ -1,0 +1,680 @@
+@import url("https://fonts.cdnfonts.com/css/montserrat");
+
+:root {
+  --white: #ffffff;
+  --blue: #307cff;
+  --black: #2a2a35;
+  --sliver: #f2f2f2;
+  --grey: #9595a6;
+  --green: #70b64d;
+  --secondary-text: #828282;
+  --primary-text: #2a2a35;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  background: var(--white);
+  max-width: 100%;
+}
+
+/* Common */
+
+.space-beetween {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.mt-70 {
+  margin-top: 70px;
+}
+
+.main-container {
+  padding: 0 135px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-spacing {
+  padding-bottom: 140px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.line {
+  width: 70px;
+  height: 4px;
+  background: #70b64d;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--primary-text);
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--primary-text);
+  margin-bottom: 20px;
+}
+
+.typography {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--secondary-text);
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 16px 32px;
+  color: var(--white);
+  background: #70b64d;
+  border-radius: 68px;
+  border: none;
+  cursor: pointer;
+}
+
+/* .navbar-menu */
+.header {
+  color: var(--white);
+}
+
+.header-collapse {
+  display: none;
+  width: 36px;
+  height: 36px;
+}
+
+.header .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--blue);
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.header-top .typography {
+  width: max-content;
+  color: var(--white);
+}
+
+.header-top .contact {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: max-content;
+}
+
+.contact .phone,
+.contact .email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact .phone img,
+.contact .email img {
+  color: #fff;
+}
+
+.header-top .button-book {
+  padding: 10px 20px;
+  color: var(--primary-text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  background: var(--white);
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.header-bottom img.header-logo {
+  width: 90px;
+  height: 72px;
+  object-fit: cover;
+}
+
+.header-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.header-menu li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--secondary-text);
+}
+
+/* Banner */
+
+.banner {
+  position: relative;
+  width: 100%;
+}
+
+.banner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner .banner-content {
+  position: relative;
+  max-width: 570px;
+  padding-top: 135px;
+  padding-bottom: 165px;
+}
+
+.banner .banner-content .heading {
+  margin-bottom: 30px;
+}
+
+.banner .banner-content .typography {
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.card {
+  position: relative;
+}
+
+.card .card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.card-control {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.card-control .step {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-text);
+}
+
+.card-control .step .active {
+  font-size: 20px;
+  color: var(--primary-text);
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  background: #fbfbfb;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-image {
+  max-height: 670px;
+  width: 100%;
+  background: var(--white);
+}
+
+.card-image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 60px;
+  background: var(--sliver);
+}
+
+/* Out System */
+.our-system {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-top {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.card-second {
+  background: var(--sliver);
+  padding: 60px 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-second .icon-bottom-left {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+.card-second .icon-top-right {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.card-second .card-control {
+  margin-bottom: 50px;
+}
+
+.card-second .title {
+  margin-bottom: 45px;
+}
+
+.card-second .button-group {
+  display: flex;
+  gap: 44px;
+}
+
+/* Contact */
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-me .line {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-me .button-send {
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.contact-form {
+  width: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form .form-group {
+  margin-bottom: 22px;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--primary-text);
+  margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group textarea,
+.input_dropdown {
+  width: 100%;
+  padding: 16px;
+  outline: none;
+  border: 1px solid #dfe4ea;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.form-group textarea {
+  margin-bottom: 20px;
+}
+
+.form-group .checkbox {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group .checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green);
+}
+
+.contact-form .form-group:last-child {
+  grid-column: 1 / -1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* FAQ */
+.faq {
+  padding-top: 70px;
+  background: var(--sliver);
+}
+
+.faq .line {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-list-item {
+  display: flex;
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.faq-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.faq-list-item .faq-icon-start {
+  width: 24px;
+  height: 24px;
+}
+
+.faq-icon-start {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  background: #e2f0db;
+  border-radius: 5px;
+}
+
+/* Main */
+.main {
+  position: relative;
+}
+
+/* footer */
+footer {
+  background-color: var(--black);
+  padding: 50px 0;
+  color: var(--white);
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer-list .footer-heading {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.footer-list .footer-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  color: inherit;
+}
+
+.footer-group:first-child {
+  width: 40%;
+}
+
+.footer-group:nth-child(2) {
+  width: 40%;
+  display: flex;
+  gap: 50px;
+}
+
+.footer-group:last-child {
+  width: 20%;
+}
+
+.footer-item li {
+  position: relative;
+  left: 20px;
+}
+
+.footer-item li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-group .contact .phone-number a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration: none;
+  color: var(--green);
+}
+
+.social-links img {
+  width: 21px;
+  height: 20.87px;
+  margin-top: 29px;
+  margin-right: 16px;
+}
+
+.copyright {
+  background: #424249;
+}
+
+.copyright .typography {
+  padding: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+@media screen and (max-width: 576px) {
+  .main-container {
+    padding: 0 30px;
+  }
+
+  .heading {
+    font-size: 26px;
+    line-height: 31.69px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 24.38px;
+  }
+
+  .typography {
+    font-size: 18px;
+    line-height: 25.2px;
+    font-weight: 400;
+  }
+
+  .section-spacing {
+    padding-bottom: 50px;
+  }
+
+  .header-collapse {
+    display: block;
+  }
+  .header .header-top {
+    display: none;
+  }
+
+  .header .header-bottom {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .header-bottom img.header-logo {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(var(--green));
+  }
+
+  .header .header-bottom .header-menu {
+    display: none;
+  }
+
+  /* Banner */
+  .banner img {
+    position: relative;
+    width: 100%;
+    max-height: 375px;
+    object-fit: cover;
+  }
+
+  .banner .banner-content {
+    padding: 25px 0;
+  }
+
+  /* Card */
+
+  .card .card-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .card-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-list .card-body {
+    padding: 30px;
+  }
+
+  .card-second .icon-bottom-left {
+    bottom: 5px;
+    left: 20px;
+    width: 71px;
+    height: 47px;
+  }
+
+  .card-second .icon-top-right {
+    top: 5px;
+    right: 20px;
+    width: 71px;
+    height: 37px;
+  }
+
+  .our-system .main-container {
+    padding: 0;
+  }
+
+  .our-system .line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .our-system .card-second {
+    border-radius: 0;
+  }
+
+  .faq-list-item .faq-icon-start {
+    position: absolute;
+    left: -15px;
+    margin: 0;
+  }
+
+  .faq-content .title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .faq-content .faq-icon-end {
+    display: none;
+  }
+
+  .contact-form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer {
+    padding: 25px 0;
+  }
+
+  .footer-list {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-group:first-child {
+    width: 100%;
+    flex: 1;
+  }
+
+  .footer-group:nth-child(2) {
+    width: 100%;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-group:last-child {
+    width: 100%;
+  }
+}
